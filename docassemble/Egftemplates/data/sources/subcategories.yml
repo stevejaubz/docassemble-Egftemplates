@@ -1,0 +1,224 @@
+-
+    ID: 1
+    Title: 'Residential Lease'
+    'Parent Category': 'Real estate'
+    'Parent Category:ID': 8
+    icon: home
+    Title_Da: Boligleje
+    SortOrder: 1
+    ItemsPath: ""
+    Enabled: True
+    Organizations: ""
+    'Organizations:ID': ""
+    Users: ""
+    'Organizations:Domain': ""
+    Elementtype: Item
+    Sti: sites/Docassemble/Lists/Subcategories
+-
+    ID: 2
+    Title: 'Commercial Lease'
+    'Parent Category': 'Real estate'
+    'Parent Category:ID': 8
+    icon: building
+    Title_Da: Erhvervsleje
+    SortOrder: 2
+    ItemsPath: '/Templates/Real Estate/Commercial Lease'
+    Enabled: True
+    Organizations: 'Greater Boston Legal Services;#1'
+    'Organizations:ID': '1;#1'
+    Users: ""
+    'Organizations:Domain': 'gbls.org;#1'
+    Elementtype: Item
+    Sti: sites/Docassemble/Lists/Subcategories
+-
+    ID: 6
+    Title: Letters
+    'Parent Category': 'General purpose'
+    'Parent Category:ID': 12
+    icon: envelope-open-text
+    Title_Da: Breve
+    SortOrder: 3
+    ItemsPath: ""
+    Enabled: True
+    Organizations: ""
+    'Organizations:ID': ""
+    Users: ""
+    'Organizations:Domain': ""
+    Elementtype: Item
+    Sti: sites/Docassemble/Lists/Subcategories
+-
+    ID: 7
+    Title: Contracts
+    'Parent Category': 'General purpose'
+    'Parent Category:ID': 12
+    icon: file-contract
+    Title_Da: Kontrakter
+    SortOrder: 4
+    ItemsPath: ""
+    Enabled: True
+    Organizations: ""
+    'Organizations:ID': ""
+    Users: ""
+    'Organizations:Domain': ""
+    Elementtype: Item
+    Sti: sites/Docassemble/Lists/Subcategories
+-
+    ID: 8
+    Title: Tools
+    'Parent Category': 'General purpose'
+    'Parent Category:ID': 12
+    icon: tools
+    Title_Da: Værktøjer
+    SortOrder: 5
+    ItemsPath: ""
+    Enabled: True
+    Organizations: ""
+    'Organizations:ID': ""
+    Users: ""
+    'Organizations:Domain': ""
+    Elementtype: Item
+    Sti: sites/Docassemble/Lists/Subcategories
+-
+    ID: 11
+    Title: Transactions
+    'Parent Category': 'Real estate'
+    'Parent Category:ID': 8
+    icon: building
+    Title_Da: 'Køb og salg'
+    SortOrder: 6
+    ItemsPath: /Templates
+    Enabled: True
+    Organizations: ""
+    'Organizations:ID': ""
+    Users: ""
+    'Organizations:Domain': ""
+    Elementtype: Item
+    Sti: sites/Docassemble/Lists/Subcategories
+-
+    ID: 12
+    Title: Policies
+    'Parent Category': 'IP & Digital Business'
+    'Parent Category:ID': 4
+    icon: certificate
+    Title_Da: Politikker
+    SortOrder: 10001
+    ItemsPath: /Templates
+    Enabled: True
+    Organizations: ""
+    'Organizations:ID': ""
+    Users: ""
+    'Organizations:Domain': ""
+    Elementtype: Item
+    Sti: sites/Docassemble/Lists/Subcategories
+-
+    ID: 13
+    Title: Procedures
+    'Parent Category': 'IP & Digital Business'
+    'Parent Category:ID': 4
+    icon: tasks
+    Title_Da: Procedurer
+    SortOrder: 10002
+    ItemsPath: /Templates
+    Enabled: True
+    Organizations: ""
+    'Organizations:ID': ""
+    Users: ""
+    'Organizations:Domain': ""
+    Elementtype: Item
+    Sti: sites/Docassemble/Lists/Subcategories
+-
+    ID: 4
+    Title: Agreements
+    'Parent Category': 'IP & Digital Business'
+    'Parent Category:ID': 4
+    icon: file-contract
+    Title_Da: Aftaler
+    SortOrder: 10003
+    ItemsPath: /Templates
+    Enabled: True
+    Organizations: ""
+    'Organizations:ID': ""
+    Users: ""
+    'Organizations:Domain': ""
+    Elementtype: Item
+    Sti: sites/Docassemble/Lists/Subcategories
+-
+    ID: 15
+    Title: 'Risk assessment'
+    'Parent Category': 'IP & Digital Business'
+    'Parent Category:ID': 4
+    icon: shield-alt
+    Title_Da: Risikoanalyse
+    SortOrder: 10004
+    ItemsPath: /Templates
+    Enabled: True
+    Organizations: ""
+    'Organizations:ID': ""
+    Users: ""
+    'Organizations:Domain': ""
+    Elementtype: Item
+    Sti: sites/Docassemble/Lists/Subcategories
+-
+    ID: 16
+    Title: 'Notification and consent'
+    'Parent Category': 'IP & Digital Business'
+    'Parent Category:ID': 4
+    icon: flag
+    Title_Da: 'Notifikationer og samtykke'
+    SortOrder: 10005
+    ItemsPath: /Templates
+    Enabled: True
+    Organizations: ""
+    'Organizations:ID': ""
+    Users: ""
+    'Organizations:Domain': ""
+    Elementtype: Item
+    Sti: sites/Docassemble/Lists/Subcategories
+-
+    ID: 17
+    Title: Checklists
+    'Parent Category': 'IP & Digital Business'
+    'Parent Category:ID': 4
+    icon: tasks
+    Title_Da: Tjeklister
+    SortOrder: 10006
+    ItemsPath: /Templates
+    Enabled: True
+    Organizations: ""
+    'Organizations:ID': ""
+    Users: ""
+    'Organizations:Domain': ""
+    Elementtype: Item
+    Sti: sites/Docassemble/Lists/Subcategories
+-
+    ID: 18
+    Title: 'Data mapping tools'
+    'Parent Category': 'IP & Digital Business'
+    'Parent Category:ID': 4
+    icon: database
+    Title_Da: 'Data mapping'
+    SortOrder: 10007
+    ItemsPath: /Templates
+    Enabled: True
+    Organizations: ""
+    'Organizations:ID': ""
+    Users: ""
+    'Organizations:Domain': ""
+    Elementtype: Item
+    Sti: sites/Docassemble/Lists/Subcategories
+-
+    ID: 19
+    Title: 'Other documents'
+    'Parent Category': 'IP & Digital Business'
+    'Parent Category:ID': 4
+    icon: folder-open
+    Title_Da: 'Andre dokumenter'
+    SortOrder: 10008
+    ItemsPath: /Templates
+    Enabled: True
+    Organizations: ""
+    'Organizations:ID': ""
+    Users: ""
+    'Organizations:Domain': ""
+    Elementtype: Item
+    Sti: sites/Docassemble/Lists/Subcategories

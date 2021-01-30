@@ -1,0 +1,234 @@
+---
+metadata:
+  title: |
+    Gorrissen Federspiel
+  logo: |
+    <img src="/packagestatic/docassemble.gftemplates/logo_white.png" style="max-height:1.85714286em;"/>
+  back button label: |
+    Back
+---
+modules:
+  - .gf_graph
+  # - .scan_for_vars
+---
+objects:
+  - o365: MSGraphConnectionObject #.using(client_id="7ec5e935-4f82-44a3-b7c5-de329a06458c",client_secret="D?GyL2FT?--wl1k39-5Yq=ogD0M=ZnD8")
+  #- folders: DADict.using(object_type=LazyFileList, auto_gather=False)
+  - drive_contents: GFLazyFileList.using(auto_gather=False,gathered=True)  
+  - tools: ToolList  
+---
+include:
+  - docassemble.gfgeneralquestions:data/questions/standard_include.yml
+---
+features:
+  css: 
+    - docassemble.gftemplates:gf.css
+  question back button: True
+---
+mandatory: True
+id: interview order
+code: |
+  # debug_tools
+  category
+  if len(drive_contents.in_category(category)) < 1:
+    soft_exit
+  if len(drive_contents.in_category_not_subcategory(category)) < 1:
+    subcategory_id
+    subcategory_document_choice
+  else:  
+    main_category_choice
+  if fill_in_vars == 'all':
+    #show_all_fields
+    set_all_fields_blank
+  use_default_values = fill_in_vars == 'defaults'
+  da_documents
+  ending_screen
+---
+code: |
+  tools = get_tools(o365,site,intrinsicName='tools')
+---
+question: |
+  ${tools}
+subquestion: |
+  % for tool in tools:
+  [${tool}](${interview_url(i=tool.interview_url)})
+  % endfor
+field: debug_tools
+---
+code: |
+  #site = "gorrissenfederspiel.sharepoint.com:/sites/Docassemble"
+  #site_id = o365.get_site_id(site)
+  #template_list_id = o365.get_list_id(site_id, "Templates")
+  #template_list_contents = o365.get_items_in_list(site, template_list_id)
+  
+  #o365.get_drive_items_with_metadata(site, "Templates", drive_contents)
+  
+  #category_list_id = o365.get_list_id(site_id, "Subcategories")
+  #category_list_contents = o365.get_items_in_list(site, category_list_id) 
+  
+  # If Site == None the default Site is pulled from configuration
+  site = None
+  categories = get_categories(o365, site)
+
+  o365.get_files_in_folder( drive="Templates", folder=None, lazylist=drive_contents, get_list_metadata=True)
+---
+question: |
+  Choose a subcategory below
+buttons:
+  code: |
+    [{category['id']: category['Title'], "image": category['icon']} for category in categories[category].get('subcategories')]
+field: subcategory_id
+---
+question: |
+  Choose a category below
+field: category
+buttons:
+  code: |
+    get_category_buttons(categories)
+---
+question: |
+  Choose a document
+subquestion: |
+  % if len(tools.in_subcategory(subcategory_id)):
+  #### Tools
+  % for tool in tools.in_subcategory(subcategory_id):
+  * ${tool.show()}
+  % endfor
+  % endif
+fields:
+  - Document: sp_documents
+    datatype: object_checkboxes
+    choices: |
+       drive_contents.in_subcategory(subcategory_id)
+    none of the above: False    
+  - note: |
+      #### Questionaire settings:
+  - How would you like your document(s)?: fill_in_vars
+    datatype: radio
+    choices:
+      - Download immediately no questions asked: all
+      - Use defaults and ask other questions: defaults
+      - Ask all relevant questions: normal
+    default: normal
+right: |
+  % if len(drive_contents.in_category_not_subcategory(category)) < 1:
+  [Back to sub categories](${url_action('sub_category_menu')})
+  % else:
+  [Back to parent category](${url_action('main_category_choice')})
+  % endif
+continue button field: subcategory_document_choice
+---
+event: subcategory_choice
+code: |
+  subcategory_id = action_argument('subcategory_id')
+  subcategory_document_choice
+---
+question: |
+  Choose a document
+subquestion: |
+  % if len(tools.in_category(category)):
+  #### Tools
+  % for tool in tools.in_category(category):
+  * ${tool.show()}
+  % endfor
+  % endif
+fields:
+  - Document: sp_documents
+    datatype: object_checkboxes
+    choices: |
+      #- "tekst": drive_contents.in_category(category)[0]
+      #- drive_contents.in_category(category)[1]
+      #[{item:item, "help": "test"} for item in drive_contents.in_category(category)]
+      # drive_contents.in_category_not_subcategory(category)   
+      drive_contents.in_category(category)
+    none of the above: False
+  - note: |
+      ### Questionaire settings:
+  - How would you like your document(s)?: fill_in_vars
+    datatype: radio
+    choices:
+      - Download immediately no questions asked: all
+      - Use defaults and ask other questions: defaults
+      - Ask all relevant questions: normal
+    default: normal
+right: |
+  % if len(categories[category].get('subcategories')):
+  ### Choose a subcategory
+  
+  % for subcategory in categories[category].get('subcategories'):
+  % if len(drive_contents.in_subcategory(subcategory['id'])):
+  *  [:${showifdef('subcategory["icon"]')}: ${subcategory['Title']}](${url_action('subcategory_choice', subcategory_id = subcategory['id'])})
+  % endif
+  % endfor
+  
+  % endif
+continue button field: main_category_choice
+#---
+# question: |
+#   Would you like to download the form without filling any variables?
+# fields:
+#   - no label: fill_in_vars
+#     datatype: radio
+#     choices:
+#       - Leave all fields blank: all
+#       - Use defaults and ask other questions: defaults
+#       - Normal fields: normal
+---
+question: |
+  ${all_fields}
+field: show_all_fields
+---
+code: |
+  temp_fields = set()
+  for dafile in da_documents:
+    temp_fields.update(dafile.get_docx_variables())
+  all_fields = temp_fields
+---
+code: |
+  for field in all_fields:
+    exec(field +'= GFEmpty()')
+  set_all_fields_blank = True
+---
+code: |
+  da_documents = DAList('da_documents', object_type = DAObject, elements=[sp_document.as_dafile() for sp_document in sp_documents])
+---
+event: ending_screen
+question: |
+  Your files are ready
+subquestion: |
+  % for da_document in da_documents:
+  * [${ da_document.filename }](${ da_document.attachment.docx.url_for() })
+  % endfor
+  
+  * [Download all: documents.zip](${ zip_file([da_document.attachment.docx for da_document in da_documents], filename="documents.zip").url_for() })
+  
+  ### Preview:
+  
+  % for da_document in da_documents:
+  
+  ${ da_document.attachment.pdf }
+  % endfor
+---
+attachment:
+  name: ${da_documents[i].filename}
+  filename: ${da_documents[i].filename.rsplit('.', 1)[0]}
+  variable name: da_documents[i].attachment
+  docx template file: 
+    code: |
+      da_documents[i]
+---
+event: soft_exit
+question: |
+  There aren't any forms in this category yet
+subquestion: |
+  Click back to try a different category.
+help: |
+  ${ categories }
+
+  ${ drive_contents }
+  
+  % for item in drive_contents:
+  ${ item.fields }
+  
+  % endfor
+back button: True

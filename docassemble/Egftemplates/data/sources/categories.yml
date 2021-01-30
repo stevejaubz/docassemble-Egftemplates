@@ -1,0 +1,156 @@
+-
+    ID: 1
+    Title: 'Dispute Resolution'
+    icon: handshake
+    Title_Da: Konfliktløsning
+    SortOrder: 1
+    ItemsPath: ""
+    Enabled: True
+    Organizations: 'Greater Boston Legal Services;'
+    'Organizations:Domain': 'gbls.org;'
+    Users: ""
+    Elementtype: Item
+    Sti: sites/Docassemble/Lists/Categories
+-
+    ID: 2
+    Title: 'EU & Competition'
+    icon: globe-europe
+    Title_Da: 'EU og konkurrence'
+    SortOrder: 2
+    ItemsPath: ""
+    Enabled: True
+    Organizations: ""
+    'Organizations:Domain': ""
+    Users: qsteenhuis@gbls.org
+    Elementtype: Item
+    Sti: sites/Docassemble/Lists/Categories
+-
+    ID: 3
+    Title: Finance/Banking
+    icon: money-check
+    Title_Da: Finansiere
+    SortOrder: 3
+    ItemsPath: ""
+    Enabled: True
+    Organizations: ""
+    'Organizations:Domain': ""
+    Users: ""
+    Elementtype: Item
+    Sti: sites/Docassemble/Lists/Categories
+-
+    ID: 4
+    Title: 'IP & Digital Business'
+    icon: lightbulb
+    Title_Da: 'Intellektuel ejendom'
+    SortOrder: 4
+    ItemsPath: ""
+    Enabled: True
+    Organizations: ""
+    'Organizations:Domain': ""
+    Users: ""
+    Elementtype: Item
+    Sti: sites/Docassemble/Lists/Categories
+-
+    ID: 5
+    Title: 'Labour and Employment'
+    icon: briefcase
+    Title_Da: 'Arbejdskraft og beskæftigelse'
+    SortOrder: 5
+    ItemsPath: ""
+    Enabled: True
+    Organizations: ""
+    'Organizations:Domain': ""
+    Users: ""
+    Elementtype: Item
+    Sti: sites/Docassemble/Lists/Categories
+-
+    ID: 6
+    Title: 'Project Development'
+    icon: sitemap
+    Title_Da: Projektudvikling
+    SortOrder: 6
+    ItemsPath: ""
+    Enabled: True
+    Organizations: ""
+    'Organizations:Domain': ""
+    Users: ""
+    Elementtype: Item
+    Sti: sites/Docassemble/Lists/Categories
+-
+    ID: 7
+    Title: 'Property Transactions and Enterprise'
+    icon: building
+    Title_Da: 'Ejendomstransaktioner og virksomhed'
+    SortOrder: 7
+    ItemsPath: ""
+    Enabled: True
+    Organizations: ""
+    'Organizations:Domain': ""
+    Users: ""
+    Elementtype: Item
+    Sti: sites/Docassemble/Lists/Categories
+-
+    ID: 8
+    Title: 'Real estate'
+    icon: home
+    Title_Da: Ejendom
+    SortOrder: 8
+    ItemsPath: ""
+    Enabled: True
+    Organizations: 'Greater Boston Legal Services;'
+    'Organizations:Domain': 'gbls.org;'
+    Users: ""
+    Elementtype: Item
+    Sti: sites/Docassemble/Lists/Categories
+-
+    ID: 9
+    Title: 'Shipping / Offshore / Transportation'
+    icon: ship
+    Title_Da: Forsendelse
+    SortOrder: 9
+    ItemsPath: ""
+    Enabled: True
+    Organizations: ""
+    'Organizations:Domain': ""
+    Users: ""
+    Elementtype: Item
+    Sti: sites/Docassemble/Lists/Categories
+-
+    ID: 10
+    Title: Tax
+    icon: money-bill-wave
+    Title_Da: Skat
+    SortOrder: 10
+    ItemsPath: ""
+    Enabled: True
+    Organizations: ""
+    'Organizations:Domain': ""
+    Users: ""
+    Elementtype: Item
+    Sti: sites/Docassemble/Lists/Categories
+-
+    ID: 11
+    Title: Insolvency
+    icon: columns
+    Title_Da: Konkurs
+    SortOrder: 11
+    ItemsPath: ""
+    Enabled: True
+    Organizations: ""
+    'Organizations:Domain': ""
+    Users: ""
+    Elementtype: Item
+    Sti: sites/Docassemble/Lists/Categories
+-
+    ID: 12
+    Title: 'General purpose'
+    icon: cogs
+    Title_Da: 'Generelle formål'
+    SortOrder: 12
+    ItemsPath: ""
+    Enabled: True
+    Organizations: ""
+    'Organizations:Domain': ""
+    Users: ""
+    Elementtype: Item
+    Sti: sites/Docassemble/Lists/Categories

@@ -1,0 +1,299 @@
+-
+    Title: 'Delivery Report'
+    Title_da: Afleveringsrapport
+    LongDescription: 'Long Description'
+    Navn: Afleveringsrapport.docx
+    'Primary Language': da
+    Category: 'Property Transactions and Enterprise'
+    'Category:ID': 7
+    Subcategory: ""
+    'Subcategory:ID': ""
+    Enabled: True
+    Elementtype: Item
+    Sti: sites/Docassemble/Templates
+-
+    Title: 'Debt Letter'
+    Title_da: Anfordringsgældsbrev
+    LongDescription: 'Long Description'
+    Navn: Anfordringsgaeldsbrev.docx
+    'Primary Language': da
+    Category: Finance/Banking
+    'Category:ID': 3
+    Subcategory: ""
+    'Subcategory:ID': ""
+    Enabled: True
+    Elementtype: Item
+    Sti: sites/Docassemble/Templates
+-
+    Title: Anpartsoverdragelsesaftale
+    Title_da: Anpartsoverdragelsesaftale
+    LongDescription: 'Long Description'
+    Navn: 'Anpartsoverdragelsesaftale Fast Ejendom.docx'
+    'Primary Language': da
+    Category: 'Real estate'
+    'Category:ID': 8
+    Subcategory: Transactions
+    'Subcategory:ID': 11
+    Enabled: True
+    Elementtype: Item
+    Sti: sites/Docassemble/Templates
+-
+    Title: 'Basic Privacy Risk Assessment'
+    Title_da: ""
+    LongDescription: ""
+    Navn: 'Basic Privacy Risk Assessment.docx'
+    'Primary Language': en
+    Category: 'IP & Digital Business'
+    'Category:ID': 4
+    Subcategory: 'Risk assessment'
+    'Subcategory:ID': 15
+    Enabled: True
+    Elementtype: Item
+    Sti: sites/Docassemble/Templates
+-
+    Title: Trappeleje
+    Title_da: ""
+    LongDescription: 'Long Description'
+    Navn: 'Beregning af trappeleje.xlsx'
+    'Primary Language': da
+    Category: 'Real estate'
+    'Category:ID': 8
+    Subcategory: 'Commercial Lease'
+    'Subcategory:ID': 2
+    Enabled: True
+    Elementtype: Item
+    Sti: sites/Docassemble/Templates
+-
+    Title: 'Commercial Lease Agreement'
+    Title_da: Erhvervslejekontrakt
+    LongDescription: 'Long Description'
+    Navn: Commercial_Lease_Agreement.docx
+    'Primary Language': en
+    Category: 'Real estate'
+    'Category:ID': 8
+    Subcategory: 'Commercial Lease'
+    'Subcategory:ID': 2
+    Enabled: True
+    Elementtype: Item
+    Sti: sites/Docassemble/Templates
+-
+    Title: 'Data Processing Agreement (DPA)'
+    Title_da: "Aftaler"
+    LongDescription: 'Long Description'
+    Navn: DPA_Client_as_Data_Processor.docx
+    'Primary Language': en
+    Category: 'IP & Digital Business'
+    'Category:ID': 4
+    Subcategory: 'Agreements'
+    'Subcategory:ID': 4
+    Enabled: True
+    Elementtype: Item
+    Sti: sites/Docassemble/Templates
+-
+    Title: Example
+    Title_da: ""
+    LongDescription: 'Long Description'
+    Navn: Eksempel.docx
+    'Primary Language': da
+    Category: 'General purpose'
+    'Category:ID': 12
+    Subcategory: ""
+    'Subcategory:ID': ""
+    Enabled: True
+    Elementtype: Item
+    Sti: sites/Docassemble/Templates
+-
+    Title: Eksempel
+    Title_da: ""
+    LongDescription: 'Eksempelfil som viser og tester en mængde input'
+    Navn: Eksempel.docx
+    'Primary Language': da
+    Category: 'General purpose'
+    'Category:ID': 12
+    Subcategory: ""
+    'Subcategory:ID': ""
+    Enabled: ""
+    Elementtype: Item
+    Sti: 'sites/Docassemble/Templates/Real Estate'
+-
+    Title: 'Commercial Lease'
+    Title_da: Erhvervslejekontrakt
+    LongDescription: 'Long Description'
+    Navn: Erhvervslejekontrakt.docx
+    'Primary Language': da
+    Category: 'Real estate'
+    'Category:ID': 8
+    Subcategory: 'Commercial Lease'
+    'Subcategory:ID': 2
+    Enabled: True
+    Elementtype: Item
+    Sti: sites/Docassemble/Templates
+-
+    Title: 'Gift Deed'
+    Title_da: Gavebrev
+    LongDescription: 'Long Description'
+    Navn: Gavebrev_foraldre-barn.docx
+    'Primary Language': en
+    Category: 'General purpose'
+    'Category:ID': 12
+    Subcategory: Contracts
+    'Subcategory:ID': 7
+    Enabled: True
+    Elementtype: Item
+    Sti: sites/Docassemble/Templates
+-
+    Title: 'General Purpose Contract'
+    Title_da: ""
+    LongDescription: 'Long Description'
+    Navn: GeneralPurposeContract.docx
+    'Primary Language': en
+    Category: 'General purpose'
+    'Category:ID': 12
+    Subcategory: Contracts
+    'Subcategory:ID': 7
+    Enabled: True
+    Elementtype: Item
+    Sti: sites/Docassemble/Templates
+-
+    Title: Honorarbrev
+    Title_da: Honorarbrev
+    LongDescription: ""
+    Navn: Honorarbrev_Private.docx
+    'Primary Language': da
+    Category: 'Real estate'
+    'Category:ID': 8
+    Subcategory: Transactions
+    'Subcategory:ID': 11
+    Enabled: True
+    Elementtype: Item
+    Sti: sites/Docassemble/Templates
+-
+    Title: 'IT Project Agreement Cover'
+    Title_da: ""
+    LongDescription: 'Long Description'
+    Navn: 'IT Project Agreement Cover.docx'
+    'Primary Language': en
+    Category: 'IP & Digital Business'
+    'Category:ID': 4
+    Subcategory: 'Other documents'
+    'Subcategory:ID': 19
+    Enabled: True
+    Elementtype: Item
+    Sti: sites/Docassemble/Templates
+-
+    Title: Købsaftale
+    Title_da: Købsaftale
+    LongDescription: 'Long Description'
+    Navn: Kobsaftale.docx
+    'Primary Language': da
+    Category: 'Real estate'
+    'Category:ID': 8
+    Subcategory: Transactions
+    'Subcategory:ID': 11
+    Enabled: True
+    Elementtype: Item
+    Sti: sites/Docassemble/Templates
+-
+    Title: Dokument
+    Title_da: ""
+    LongDescription: ""
+    Navn: 'OGF - Annual General Meeting Minutes - A_S - DK.doc'
+    'Primary Language': ""
+    Category: ""
+    'Category:ID': ""
+    Subcategory: ""
+    'Subcategory:ID': ""
+    Enabled: True
+    Elementtype: Item
+    Sti: sites/Docassemble/Templates
+-
+    Title: 'Termination of Lease'
+    Title_da: 'Opsigelse af lejekontrakt'
+    LongDescription: 'Long Description'
+    Navn: 'Opsigelse af lejekontrakt.docx'
+    'Primary Language': da
+    Category: 'Real estate'
+    'Category:ID': 8
+    Subcategory: 'Commercial Lease'
+    'Subcategory:ID': 2
+    Enabled: True
+    Elementtype: Item
+    Sti: sites/Docassemble/Templates
+-
+    Title: Dokument
+    Title_da: ""
+    LongDescription: ""
+    Navn: 'Ordinær generalforsamling i et ApS - DK.doc'
+    'Primary Language': ""
+    Category: ""
+    'Category:ID': ""
+    Subcategory: ""
+    'Subcategory:ID': ""
+    Enabled: True
+    Elementtype: Item
+    Sti: sites/Docassemble/Templates
+-
+    Title: 'Privacy Notice (General use)'
+    Title_da: ""
+    LongDescription: 'Long Description'
+    Navn: 'Privacy Notice - General use.docx'
+    'Primary Language': en
+    Category: 'IP & Digital Business'
+    'Category:ID': 4
+    Subcategory: 'Notification and consent'
+    'Subcategory:ID': 16
+    Enabled: True
+    Elementtype: Item
+    Sti: sites/Docassemble/Templates
+-
+    Title: 'AdvoPro standarddokument'
+    Title_da: ""
+    LongDescription: ""
+    Navn: 'Referat af direktionsmøde - ApS.docx'
+    'Primary Language': ""
+    Category: ""
+    'Category:ID': ""
+    Subcategory: ""
+    'Subcategory:ID': ""
+    Enabled: True
+    Elementtype: Item
+    Sti: sites/Docassemble/Templates
+-
+    Title: Brev
+    Title_da: ""
+    LongDescription: 'Long Description'
+    Navn: Standardbrev.docx
+    'Primary Language': da
+    Category: 'General purpose'
+    'Category:ID': 12
+    Subcategory: Letters
+    'Subcategory:ID': 6
+    Enabled: True
+    Elementtype: Item
+    Sti: sites/Docassemble/Templates
+-
+    Title: Dokument
+    Title_da: ""
+    LongDescription: ""
+    Navn: 'Standardvedtægter - ApS med bestyrelse - DK.doc'
+    'Primary Language': ""
+    Category: ""
+    'Category:ID': ""
+    Subcategory: ""
+    'Subcategory:ID': ""
+    Enabled: True
+    Elementtype: Item
+    Sti: sites/Docassemble/Templates
+-
+    Title: Dokument
+    Title_da: ""
+    LongDescription: ""
+    Navn: 'Standardvedtægter - ApS uden bestyrelse - DK.doc'
+    'Primary Language': ""
+    Category: ""
+    'Category:ID': ""
+    Subcategory: ""
+    'Subcategory:ID': ""
+    Enabled: True
+    Elementtype: Item
+    Sti: sites/Docassemble/Templates

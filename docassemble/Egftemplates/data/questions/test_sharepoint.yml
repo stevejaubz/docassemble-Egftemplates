@@ -1,0 +1,85 @@
+---
+modules:
+  - .gf_graph
+---
+objects:
+  - o365: MSGraphConnectionObject #.using(client_id="7ec5e935-4f82-44a3-b7c5-de329a06458c",client_secret="D?GyL2FT?--wl1k39-5Yq=ogD0M=ZnD8")
+  - folders: DADict.using(object_type=LazyFileList, auto_gather=False)
+  - drive_contents: LazyFileList.using(auto_gather=False)  
+---
+code: |
+  drive_id = o365.get_drive_id("gorrissenfederspiel.sharepoint.com:/sites/Docassemble","Templates")
+  o365.get_files_in_folder("gorrissenfederspiel.sharepoint.com:sites/Docassemble","Templates", drive_id=drive_id, lazylist=drive_contents)
+  drive_contents.gathered = True
+---
+code: |
+  site = "gorrissenfederspiel.sharepoint.com:/sites/Docassemble"
+  drive_id_url = "https://graph.microsoft.com/v1.0/sites/"
+  drive_id_url += site + ":/drives"
+  
+  site_id = o365.get_site_id(site)
+  tool_list_id = o365.get_list_id(site_id, "Tools")
+ 
+  res = o365.get_request(drive_id_url)
+---
+mandatory: True
+question: |
+  Some tests
+subquestion: |
+  `${json.dumps(o365.get_request('https://graph.microsoft.com/v1.0/drives/b!0PCobezqK0ecoB7I0TbTJkvMrGm2K-VIuGS2szEGq6BiGMg54KexR4Z0lRzom0Vw/items/012M4US2QR4WV4DX3WKBA3FBPHSMAXEX2N'))}`
+  
+  {o365.authorization_header}
+    
+  # 0
+  site_id = ${site_id}  
+  tool_list_id = ${tool_list_id}  
+  `${json.dumps(o365.get_items_in_list(site, tool_list_id))}`
+  
+  # 1
+  `{json.dumps(o365.get_request('https://graph.microsoft.com/v1.0/sites/gorrissenfederspiel.sharepoint.com:/sites/Docassemble:/drives'))}`
+  
+  # get the site ID for the given URL
+  `${json.dumps(o365.get_request('https://graph.microsoft.com/v1.0/sites/gorrissenfederspiel.sharepoint.com:/sites/Docassemble'))}`
+  We will use the second part of the `id` key in the result. 
+  
+  # get the lists of the given site ID
+  
+  `${json.dumps(o365.get_request('https://graph.microsoft.com/v1.0/sites/6da8f0d0-eaec-472b-9ca0-1ec8d136d326/lists'))}`
+  
+  # # 1.5 list files at drive ID b!0PCobezqK0ecoB7I0TbTJkvMrGm2K-VIuGS2szEGq6BiGMg54KexR4Z0lRzom0Vw
+  
+  `${json.dumps(o365.get_request('https://graph.microsoft.com/v1.0/drives/b!0PCobezqK0ecoB7I0TbTJkvMrGm2K-VIuGS2szEGq6BiGMg54KexR4Z0lRzom0Vw/root/children'))}`
+  
+  # # 1.6 Get the drive b!0PCobezqK0ecoB7I0TbTJkvMrGm2K-VIuGS2szEGq6BiGMg54KexR4Z0lRzom0Vw as a SharePoint list (includes list ID)
+    `${json.dumps(o365.get_request('https://graph.microsoft.com/v1.0/drives/b!0PCobezqK0ecoB7I0TbTJkvMrGm2K-VIuGS2szEGq6BiGMg54KexR4Z0lRzom0Vw/list'))}`
+  
+  
+  # # 1.7 Get the list items at list ID 39c81862-a7e0-47b1-8674-951ce89b4570
+  
+  39c81862-a7e0-47b1-8674-951ce89b4570
+  `${json.dumps(o365.get_request('https://graph.microsoft.com/v1.0/sites/gorrissenfederspiel.sharepoint.com:/sites/Docassemble:/lists/39c81862-a7e0-47b1-8674-951ce89b4570/items?expand=fields'))}`
+  
+  # # 1.75
+  
+  `${json.dumps(o365.get_request('https://graph.microsoft.com/v1.0/drives/b!0PCobezqK0ecoB7I0TbTJkvMrGm2K-VIuGS2szEGq6BiGMg54KexR4Z0lRzom0Vw/root/Standardbrev_ARH.docx?$select=file,LongDescription,Category,Subcategory'))}`
+
+  # #2
+  ${o365.get_request('https://graph.microsoft.com/v1.0/sites/root/drives')}
+  
+  
+  # #3
+  
+  `${o365.get_list_id("6da8f0d0-eaec-472b-9ca0-1ec8d136d326", "Categories")}`
+  
+  `${json.dumps(o365.get_request('https://graph.microsoft.com/v1.0/sites/gorrissenfederspiel.sharepoint.com:/sites/Docassemble:/lists/09abb742-9b64-4c9a-8ec7-e5b0faee202d/items?expand=fields'))}`
+  
+   {res}
+continue button field: test   
+---
+mandatory: True
+question: |
+  Choose a template
+fields:
+  - Choose an existing template: sp_file
+    datatype: object
+    choices: drive_contents
